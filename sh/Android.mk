@@ -29,7 +29,7 @@ LOCAL_SRC_FILES:= \
 	bltin/echo.c \
 	init.c
 
-LOCAL_MODULE:= sh
+LOCAL_MODULE:= sh.orig
 
 LOCAL_CFLAGS += -DSHELL -DWITH_LINENOISE
 
