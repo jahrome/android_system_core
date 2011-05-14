@@ -1,6 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
+LOCAL_MODULE_TAGS:=eng debug
+
 LOCAL_SRC_FILES:= \
 	alias.c \
 	arith.c \
@@ -29,7 +31,7 @@ LOCAL_SRC_FILES:= \
 	bltin/echo.c \
 	init.c
 
-LOCAL_MODULE:= sh
+LOCAL_MODULE:= sh.orig
 
 LOCAL_CFLAGS += -DSHELL -DWITH_LINENOISE
 
