@@ -16,7 +16,7 @@ EXTRA_SRCS :=
 ifeq ($(HOST_OS),linux)
   USB_SRCS := usb_linux.c
   EXTRA_SRCS := get_my_path_linux.c
-  LOCAL_LDLIBS += -lrt -lncurses -lpthread
+  LOCAL_LDLIBS += -lrt -lpthread
 endif
 
 ifeq ($(HOST_OS),darwin)
@@ -142,6 +142,10 @@ endif
 
 ifeq ($(BOARD_USE_SCREENCAP),true)
 	LOCAL_CFLAGS += -DUSE_SCREENCAP
+endif
+
+ifeq ($(BOARD_ALWAYS_INSECURE),true)
+	LOCAL_CFLAGS += -DBOARD_ALWAYS_INSECURE
 endif
 
 LOCAL_MODULE := adbd
